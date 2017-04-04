@@ -846,8 +846,7 @@ func compareByIGPCost(path1, path2 *Path) *Path {
 	routes1, _ := netlink.RouteListFiltered(netlink.FAMILY_ALL, routeFilter1, netlink.RT_FILTER_DST)
 	if len(routes1) > 0 {
 		metric1 = routes1[0].Priority
-	}
-	else {
+	} else {
 		return nil
 	}
 
@@ -863,8 +862,7 @@ func compareByIGPCost(path1, path2 *Path) *Path {
 	routes2, _ := netlink.RouteListFiltered(netlink.FAMILY_ALL, routeFilter2, netlink.RT_FILTER_DST)
 	if len(routes2) > 0 {
 		metric2 = routes2[0].Priority
-	}
-	else {
+	} else {
 		return nil
 	}
 
