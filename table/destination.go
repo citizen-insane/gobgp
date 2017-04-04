@@ -847,6 +847,9 @@ func compareByIGPCost(path1, path2 *Path) *Path {
 	if len(routes1) > 0 {
 		metric1 = routes1[0].Priority
 	}
+	else {
+		return nil
+	}
 
 	nexthop2 := path2.GetNexthop()
 	var ipNet2 *net.IPNet
@@ -860,6 +863,9 @@ func compareByIGPCost(path1, path2 *Path) *Path {
 	routes2, _ := netlink.RouteListFiltered(netlink.FAMILY_ALL, routeFilter2, netlink.RT_FILTER_DST)
 	if len(routes2) > 0 {
 		metric2 = routes2[0].Priority
+	}
+	else {
+		return nil
 	}
 
 	if metric1 < metric2 {
