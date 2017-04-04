@@ -20,7 +20,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/osrg/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/packet/bgp"
 	"github.com/spf13/cobra"
 )
 

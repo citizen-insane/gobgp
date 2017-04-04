@@ -18,7 +18,7 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/osrg/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/packet/bgp"
 	"github.com/spf13/cobra"
 	"sort"
 	"strconv"

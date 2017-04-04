@@ -16,8 +16,8 @@
 package server
 
 import (
-	"github.com/osrg/gobgp/table"
-	"github.com/osrg/gobgp/zebra"
+	"github.com/citizen-insane/gobgp/table"
+	"github.com/citizen-insane/gobgp/zebra"
 	"github.com/stretchr/testify/assert"
 	"net"
 	"testing"

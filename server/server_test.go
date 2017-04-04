@@ -17,9 +17,9 @@ package server
 
 import (
 	log "github.com/Sirupsen/logrus"
-	"github.com/osrg/gobgp/config"
-	"github.com/osrg/gobgp/packet/bgp"
-	"github.com/osrg/gobgp/table"
+	"github.com/citizen-insane/gobgp/config"
+	"github.com/citizen-insane/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/table"
 	"github.com/stretchr/testify/assert"
 	"net"
 	"runtime"

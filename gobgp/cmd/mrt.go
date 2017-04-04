@@ -22,8 +22,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/osrg/gobgp/packet/mrt"
-	"github.com/osrg/gobgp/table"
+	"github.com/citizen-insane/gobgp/packet/mrt"
+	"github.com/citizen-insane/gobgp/table"
 	"github.com/spf13/cobra"
 )
 

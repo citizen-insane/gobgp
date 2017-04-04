@@ -17,8 +17,8 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/osrg/gobgp/config"
-	"github.com/osrg/gobgp/packet/bmp"
+	"github.com/citizen-insane/gobgp/config"
+	"github.com/citizen-insane/gobgp/packet/bmp"
 	"github.com/spf13/cobra"
 	"net"
 	"strconv"

@@ -26,10 +26,10 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/armon/go-radix"
-	"github.com/osrg/gobgp/config"
-	"github.com/osrg/gobgp/packet/bgp"
-	"github.com/osrg/gobgp/packet/rtr"
-	"github.com/osrg/gobgp/table"
+	"github.com/citizen-insane/gobgp/config"
+	"github.com/citizen-insane/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/packet/rtr"
+	"github.com/citizen-insane/gobgp/table"
 	"golang.org/x/net/context"
 )
 

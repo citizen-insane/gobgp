@@ -17,7 +17,7 @@ package server
 
 import (
 	"github.com/eapache/channels"
-	"github.com/osrg/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/packet/bgp"
 )
 
 func cleanInfiniteChannel(ch *channels.InfiniteChannel) {

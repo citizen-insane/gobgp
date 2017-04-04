@@ -22,10 +22,10 @@ import (
 	"strconv"
 	"time"
 
-	api "github.com/osrg/gobgp/api"
-	"github.com/osrg/gobgp/config"
-	"github.com/osrg/gobgp/packet/bgp"
-	"github.com/osrg/gobgp/table"
+	api "github.com/citizen-insane/gobgp/api"
+	"github.com/citizen-insane/gobgp/config"
+	"github.com/citizen-insane/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/table"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )

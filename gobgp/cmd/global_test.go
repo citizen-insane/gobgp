@@ -17,7 +17,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/osrg/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/packet/bgp"
 	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"

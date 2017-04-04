@@ -19,9 +19,9 @@ import (
 	"testing"
 	"time"
 
-	api "github.com/osrg/gobgp/api"
-	"github.com/osrg/gobgp/config"
-	"github.com/osrg/gobgp/server"
+	api "github.com/citizen-insane/gobgp/api"
+	"github.com/citizen-insane/gobgp/config"
+	"github.com/citizen-insane/gobgp/server"
 	"github.com/stretchr/testify/assert"
 )
 

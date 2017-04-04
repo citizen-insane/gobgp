@@ -25,10 +25,10 @@ import (
 	"strconv"
 	"strings"
 
-	cli "github.com/osrg/gobgp/client"
-	"github.com/osrg/gobgp/config"
-	"github.com/osrg/gobgp/packet/bgp"
-	"github.com/osrg/gobgp/table"
+	cli "github.com/citizen-insane/gobgp/client"
+	"github.com/citizen-insane/gobgp/config"
+	"github.com/citizen-insane/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/table"
 )
 
 const (

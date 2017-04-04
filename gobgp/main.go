@@ -16,7 +16,7 @@
 package main
 
 import (
-	"github.com/osrg/gobgp/gobgp/cmd"
+	"github.com/citizen-insane/gobgp/gobgp/cmd"
 	"google.golang.org/grpc"
 )
 

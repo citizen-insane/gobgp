@@ -20,7 +20,7 @@ import (
 	"net/http"
 	_ "net/http/pprof"
 
-	cli "github.com/osrg/gobgp/client"
+	cli "github.com/citizen-insane/gobgp/client"
 	"github.com/spf13/cobra"
 )
 

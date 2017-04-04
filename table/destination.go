@@ -24,8 +24,9 @@ import (
 	"sort"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/osrg/gobgp/config"
-	"github.com/osrg/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/config"
+	"github.com/citizen-insane/gobgp/packet/bgp"
+	"github.com/vishvananda/netlink"
 )
 
 var SelectionOptions config.RouteSelectionOptionsConfig
@@ -829,10 +830,44 @@ func compareByIGPCost(path1, path2 *Path) *Path {
 	//	Select the route with the lowest IGP cost to the next hop.
 	//
 	//	Return None if igp cost is same.
-	// Currently BGPS has no concept of IGP and IGP cost.
 	log.WithFields(log.Fields{
 		"Topic": "Table",
 	}).Debugf("enter compareByIGPCost -- path1: %v, path2: %v", path1, path2)
+
+	nexthop1 := path1.GetNexthop()
+	var ipNet1 *net.IPNet
+	var metric1 int
+	if len(nexthop1) == 4 {
+		_, ipNet1, _ = net.ParseCIDR(nexthop1.String() + "/32")
+	} else {
+		_, ipNet1, _ = net.ParseCIDR(nexthop1.String() + "/128")
+	}
+	routeFilter1 := &netlink.Route{ Dst: ipNet1, }
+	routes1, _ := netlink.RouteListFiltered(netlink.FAMILY_ALL, routeFilter1, netlink.RT_FILTER_DST)
+	if len(routes1) > 0 {
+		metric1 = routes1[0].Priority
+	}
+
+	nexthop2 := path2.GetNexthop()
+	var ipNet2 *net.IPNet
+	var metric2 int
+	if len(nexthop2) == 4 {
+		_, ipNet2, _ = net.ParseCIDR(nexthop2.String() + "/32")
+	} else {
+		_, ipNet2, _ = net.ParseCIDR(nexthop2.String() + "/128")
+	}
+	routeFilter2 := &netlink.Route{ Dst: ipNet2, }
+	routes2, _ := netlink.RouteListFiltered(netlink.FAMILY_ALL, routeFilter2, netlink.RT_FILTER_DST)
+	if len(routes2) > 0 {
+		metric2 = routes2[0].Priority
+	}
+
+	if metric1 < metric2 {
+		return path1
+	} else if metric2 < metric1 {
+		return path2
+	}
+
 	return nil
 }
 

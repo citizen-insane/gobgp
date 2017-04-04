@@ -22,7 +22,7 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/armon/go-radix"
-	"github.com/osrg/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/packet/bgp"
 )
 
 type LookupOption uint8

@@ -21,8 +21,8 @@ import (
 	"io"
 	"net"
 
-	"github.com/osrg/gobgp/packet/bgp"
-	"github.com/osrg/gobgp/table"
+	"github.com/citizen-insane/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/table"
 	"github.com/spf13/cobra"
 )
 

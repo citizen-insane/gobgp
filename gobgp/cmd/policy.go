@@ -25,8 +25,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/osrg/gobgp/config"
-	"github.com/osrg/gobgp/table"
+	"github.com/citizen-insane/gobgp/config"
+	"github.com/citizen-insane/gobgp/table"
 	"github.com/spf13/cobra"
 )
 

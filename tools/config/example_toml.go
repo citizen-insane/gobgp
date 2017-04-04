@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/BurntSushi/toml"
-	"github.com/osrg/gobgp/config"
+	"github.com/citizen-insane/gobgp/config"
 )
 
 func main() {

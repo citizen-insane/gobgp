@@ -18,7 +18,7 @@ package mrt
 import (
 	"bufio"
 	"bytes"
-	"github.com/osrg/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/packet/bgp"
 	"github.com/stretchr/testify/assert"
 	"reflect"
 	"testing"

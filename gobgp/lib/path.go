@@ -36,9 +36,9 @@ import (
 	"encoding/json"
 	"strings"
 
-	api "github.com/osrg/gobgp/api"
-	"github.com/osrg/gobgp/gobgp/cmd"
-	"github.com/osrg/gobgp/packet/bgp"
+	api "github.com/citizen-insane/gobgp/api"
+	"github.com/citizen-insane/gobgp/gobgp/cmd"
+	"github.com/citizen-insane/gobgp/packet/bgp"
 )
 
 //export get_route_family

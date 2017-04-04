@@ -25,9 +25,9 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/eapache/channels"
-	"github.com/osrg/gobgp/config"
-	"github.com/osrg/gobgp/packet/bgp"
-	"github.com/osrg/gobgp/table"
+	"github.com/citizen-insane/gobgp/config"
+	"github.com/citizen-insane/gobgp/packet/bgp"
+	"github.com/citizen-insane/gobgp/table"
 )
 
 type TCPListener struct {

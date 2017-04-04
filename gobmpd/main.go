@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"fmt"
 	log "github.com/Sirupsen/logrus"
-	"github.com/osrg/gobgp/packet/bmp"
+	"github.com/citizen-insane/gobgp/packet/bmp"
 	"net"
 	"os"
 	"strconv"
