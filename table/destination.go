@@ -837,7 +837,7 @@ func compareByIGPCost(path1, path2 *Path) *Path {
 	nexthop1 := path1.GetNexthop()
 	var ipNet1 *net.IPNet
 	var metric1 int
-	if len(nexthop1) == 4 {
+	if nexthop1.To4() != nil {
 		_, ipNet1, _ = net.ParseCIDR(nexthop1.String() + "/32")
 	} else {
 		_, ipNet1, _ = net.ParseCIDR(nexthop1.String() + "/128")
@@ -853,7 +853,7 @@ func compareByIGPCost(path1, path2 *Path) *Path {
 	nexthop2 := path2.GetNexthop()
 	var ipNet2 *net.IPNet
 	var metric2 int
-	if len(nexthop2) == 4 {
+	if nexthop2.To4() != nil {
 		_, ipNet2, _ = net.ParseCIDR(nexthop2.String() + "/32")
 	} else {
 		_, ipNet2, _ = net.ParseCIDR(nexthop2.String() + "/128")
